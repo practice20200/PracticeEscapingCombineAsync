@@ -11,6 +11,8 @@
 		B3AEBBD828923DF2000CFB4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEBBD728923DF2000CFB4B /* ContentView.swift */; };
 		B3AEBBDA28923DF6000CFB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AEBBD928923DF6000CFB4B /* Assets.xcassets */; };
 		B3AEBBDD28923DF6000CFB4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AEBBDC28923DF6000CFB4B /* Preview Assets.xcassets */; };
+		B3AEBBE428923ED3000CFB4B /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEBBE328923ED3000CFB4B /* DownloadManager.swift */; };
+		B3AEBBE62892481B000CFB4B /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEBBE52892481B000CFB4B /* ImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B3AEBBD728923DF2000CFB4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3AEBBD928923DF6000CFB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3AEBBDC28923DF6000CFB4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3AEBBE328923ED3000CFB4B /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		B3AEBBE52892481B000CFB4B /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				B3AEBBD728923DF2000CFB4B /* ContentView.swift */,
 				B3AEBBD928923DF6000CFB4B /* Assets.xcassets */,
 				B3AEBBDB28923DF6000CFB4B /* Preview Content */,
+				B3AEBBE328923ED3000CFB4B /* DownloadManager.swift */,
+				B3AEBBE52892481B000CFB4B /* ImageViewModel.swift */,
 			);
 			path = URLSessionEscapingANDCombine;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3AEBBD828923DF2000CFB4B /* ContentView.swift in Sources */,
+				B3AEBBE428923ED3000CFB4B /* DownloadManager.swift in Sources */,
+				B3AEBBE62892481B000CFB4B /* ImageViewModel.swift in Sources */,
 				B3AEBBD628923DF2000CFB4B /* URLSessionEscapingANDCombineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

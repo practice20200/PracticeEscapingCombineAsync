@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ImageViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            if let image = viewModel.image{
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+            }
+        }
+        .onAppear {
+            viewModel.fetchImage()
+        }
     }
 }
 
