@@ -31,6 +31,7 @@ class ImageViewModel: ObservableObject{
     */
     
     //MARK: Combine
+    /*
     func fetchImage(){
         downloadManager.downloadWithCombine()
             .receive(on: DispatchQueue.main)
@@ -41,6 +42,15 @@ class ImageViewModel: ObservableObject{
             }
             .store(in: &cancellable)
 
+    }
+     */
+    
+    func fetch() async{
+        let image = try? await downloadManager.downloadWithAsync()
+        await MainActor.run {
+            self.image = image
+        }
+       
     }
     
 }

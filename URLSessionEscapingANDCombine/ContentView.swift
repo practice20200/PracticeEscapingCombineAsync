@@ -31,7 +31,13 @@ struct ContentView: View {
             
         }
         .onAppear {
-            viewModel.fetchImage()
+        //MARK: @Escaping Cmbine
+            //viewModel.fetchImage()
+            
+        //MARK: Async
+            Task{
+                await viewModel.fetch()
+            }
         }
     }
     

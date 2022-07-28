@@ -40,11 +40,26 @@ class DownloadManager{
      */
     
     //MARK: Combine
+    /*
     func downloadWithCombine() -> AnyPublisher<UIImage?, Error>{
         URLSession.shared.dataTaskPublisher(for: url ?? URL(string: "")!)
             .map(responseHandler)
             .mapError({$0})
             .eraseToAnyPublisher()
     }
+    */
     
+    //Async
+    func downloadWithAsync() async throws -> UIImage?{
+        guard let url = url else { return nil}
+        
+        do{
+            let (data, response) = try await URLSession.shared.data(from: url, delegate: nil)
+            let image = responseHandler(data: data, response: response)
+            return image
+        }catch{
+            throw error
+        }
+
+    }
 }
