@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class DownloadManager{
     let url = URL(string: "https://picsum.photos/200")
@@ -24,6 +25,8 @@ class DownloadManager{
     }
     
     
+    //MARK: @EScaping
+    /*
     func downloadImage(completion: @escaping (_ image: UIImage?, _ error: Error?) -> ()){
         guard let url = url else { return }
         let task = URLSession.shared.dataTask(with: url){ [weak self] data, response, error in
@@ -33,6 +36,15 @@ class DownloadManager{
         }
         task.resume()
 
+    }
+     */
+    
+    //MARK: Combine
+    func downloadWithCombine() -> AnyPublisher<UIImage?, Error>{
+        URLSession.shared.dataTaskPublisher(for: url ?? URL(string: "")!)
+            .map(responseHandler)
+            .mapError({$0})
+            .eraseToAnyPublisher()
     }
     
 }

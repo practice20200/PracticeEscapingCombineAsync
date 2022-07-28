@@ -12,15 +12,31 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            if let image = viewModel.image{
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
+            VStack {
+                Text("Today's Image")
+                    .frame(width: 200, height: 50, alignment: .center)
+                
+                if let image = viewModel.image{
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(
+                            Circle()
+                        )
+                        .frame(width: 200, height: 200)
+                }else {
+                    ProgressView()
+                }
             }
+            
         }
         .onAppear {
             viewModel.fetchImage()
         }
+    }
+    
+    func displayImage(){
+        
     }
 }
 
